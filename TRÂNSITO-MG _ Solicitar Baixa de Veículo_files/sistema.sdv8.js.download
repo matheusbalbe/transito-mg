@@ -1,0 +1,262 @@
+// txt aguarde
+if (typeof txtAguarde === 'undefined') {
+    var txtAguarde = '&nbsp;&nbsp;&nbsp;&nbsp;Aguarde';
+}
+
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items: 4,
+        loop: ($(".owl-carousel .item").length > 4) ? true : false,
+        center: ($(".owl-carousel .item").length > 1) ? false : true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayHoverPause: true,
+        autoWidth: true
+    });
+
+    if (jQuery().select2) {
+        $('select').each(function () {
+            $(this).select2({
+                theme: 'bootstrap4',
+                language: 'pt-BR'
+            });
+        });
+    }
+
+    $('.select2-container').removeAttr('style');
+
+    // text-mais-menos
+    $(".text-mais-menos").click(function () {
+        $(this).toggleClass('menos')
+    })
+
+
+    $('.form-aguarde button.btn-primary').click(function () {
+        if ($('.form-aguarde').is(':invalid') != 0 && $(this).attr('data-toggle') == 'modal') {
+            alerta({ title: "Preenha os campos obrigatórios !", type: 'error', width: '600px' });
+            return false
+        }
+    })
+
+    // formulário aguarde
+    $('.form-aguarde').submit(function () {
+        $(this).find(':submit').html(txtAguarde).prop('disabled', 'disabled').addClass('btn-reload')
+    })
+
+    // formulário download
+    $('.form-download').submit(function () {
+        let htmlAntigo = $(this).find(':submit').html()
+        $(this).find(':submit').html(txtAguarde).prop('disabled', 'disabled').delay(2000).promise().done(function () {
+            $(this).html(htmlAntigo).prop('disabled', null)
+        })
+    })
+
+    // botão aguarde
+    $(".btn-aguarde").click(function (e) {
+        let tipoElemento = e.target.localName
+
+        if (!$(this).prop('disabled')) {
+            let htmlAntigo = $(this).html()
+            $(this).html(txtAguarde).prop('disabled', 'disabled').addClass('btn-reload')
+        } else {
+            //console.log('aguarde o carregamento da página !')
+            return false
+        }
+    })
+
+    // botão ok modal
+    $(".btn-ok-modal").click(function (e) {
+        $(this).html(txtAguarde).prop('disabled', 'disabled').addClass('btn-reload')
+    })
+
+    // botão download
+    $(".btn-download").click(function (e) {
+        let htmlAntigo = $(this).html()
+        $(this).html(txtAguarde).delay(2000).promise().done(function () {
+            $(this).html(htmlAntigo)
+        })
+    })
+
+    // somente números
+    $(document).on('keypress', '.so-numeros', function (event) {
+        var k;
+        var t = [0, 8, 99, 118, 120];
+        document.all ? k = event.keyCode : k = event.which;
+        if (t.includes(k)) {
+            return true;
+        }
+
+        return ((k >= 48 && k <= 57));
+    });
+
+    $('.txt-placa, .txt-chassi').on('keyup', function() {
+        this.value = this.value.toUpperCase();
+    }).addClass('text-uppercase');
+
+	/* Busca lista de municípios de uma UF */
+	$('select[buscar-municipios=true], select[buscar-municipios=1]').change(function() {
+		const $this = $(this);
+		const siglaUf = $this.val();
+        const municipioId = $this.attr('municipio-id');
+        const elementoMunicipio = municipioId.length ? $(`#${municipioId}`) : $('#municipio');
+
+		if (!siglaUf.length || !elementoMunicipio.length) {
+			return false;
+		}
+
+		$.ajax({
+            url: getBaseURL() + 'ajax/comum/municipios/ajax-combo-municipios/' + siglaUf,
+			type: 'GET',
+            beforeSend: function() {
+                desabilitarSelectInserirMensagemCarregando(elementoMunicipio);
+            },
+	        success: function(data) {
+                if (Object.keys(data).length > 0) {
+                    let html = `<option value="">-- Selecione --</option>`;
+
+                    $.each(data, function(index, municipio) {
+                        html += `<option value="${municipio.id}">${municipio.descricao}</option>`;
+                    });
+
+                    elementoMunicipio.html('');
+                    elementoMunicipio.append(html);
+                    
+                    const codigoMunicipioAnterior = elementoMunicipio.attr('municipio-anterior');
+
+                    if (elementoMunicipio.find(`option[value="${codigoMunicipioAnterior}"]`).length) {
+                        elementoMunicipio.val(codigoMunicipioAnterior);
+                    }
+                }
+			},
+			complete: function() {
+				habilitarSelect(elementoMunicipio);
+			},
+	        error: function(retorno) {
+	        	/* Acesso não permitido */
+	        	if (retorno.status == 403) {
+	        		location.reload();
+	        	}
+	        }
+	    });
+	}).change();
+
+    $('.copiar-texto').each(function() {
+        const $this = $(this);
+
+        if ($this.attr('data-original-title')) {
+            $this.attr('initial-title', $this.attr('data-original-title'));
+        }
+    });
+
+    $('.copiar-texto').mouseout(function() {
+        const $this = $(this);
+
+        if ($this.attr('initial-title')) {
+            $this.attr('data-original-title', $this.attr('initial-title'));
+        }
+    });
+
+    $('.copiar-texto').click(function() {
+        const $this = $(this);
+
+        if ($this.attr('texto')) {
+            copiarTexto($this.attr('texto'));
+
+            $this.attr('data-original-title', 'Copiado!')
+                .tooltip('show')
+                .focusout();
+        }
+    });
+});
+
+/**
+ *	Metodo para recuperar a UrlBase do Projeto (Ex http://localhost/cakephp/)
+ */
+function getBaseURL() {
+    var baseURL = $("#urlBase").val();
+
+    if (baseURL.substr(-1, 1) != "/") {
+        baseURL += "/";
+    }
+
+    return baseURL;
+}
+
+/**
+ *
+ */
+function desabilitarSelectInserirMensagemCarregando(elemento) {
+	elemento.html("<option value=''>Carregando...</option>");
+	elemento.attr('disabled', true);
+}
+
+/**
+ * 
+ */
+function copiarTexto(texto) {
+    removerSelecaoTexto();
+    adicionarTextoParaSerCopiado(texto);
+
+    if (document.selection) {
+        const range = document.body.createTextRange();
+        range.moveToElementText(obterNoTextoQueSeraCopiado());
+        range.select().createTextRange();
+    } 
+    else if (window.getSelection) {
+        const range = document.createRange();
+        range.selectNode(obterNoTextoQueSeraCopiado());
+        window.getSelection().addRange(range);
+    }
+
+    document.execCommand('copy');
+
+    removerTextoCopiado();
+    removerSelecaoTexto();
+}
+
+/**
+ * 
+ */
+function habilitarSelect(elemento) {
+	elemento.attr('disabled', false);
+}
+
+/**
+ * 
+ */
+function removerSelecaoTexto() {
+    if (window.getSelection) {
+        if (window.getSelection().empty) { // Chrome
+            window.getSelection().empty();
+        } else if (window.getSelection().removeAllRanges) { // Firefox
+            window.getSelection().removeAllRanges();
+        }
+    } else if (document.selection) { // IE
+        document.selection.empty();
+    }
+}
+
+/**
+ * 
+ */
+function adicionarTextoParaSerCopiado(texto) {
+    $('body').prepend($('<div id="texto-para-copiar" style="width:0px;height:0px"></div>').html(texto));
+}
+
+/**
+ * 
+ */
+function removerTextoCopiado() {
+    $('#texto-para-copiar').remove();
+}
+
+/**
+ * 
+ */
+function obterNoTextoQueSeraCopiado() {
+    return $('#texto-para-copiar').get(0);
+}

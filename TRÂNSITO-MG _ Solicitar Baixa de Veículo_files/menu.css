@@ -1,0 +1,226 @@
+.nav-image {
+    position  : relative;
+    height    : auto;
+    background: url(../img/default2.jpg);
+}
+
+
+
+/* background-image: url(http://omset.files.wordpress.com/2010/06/homer-simpson-1-264a0.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+ */
+
+.logo-detran {
+    min-width: 120px;
+    height   : 155px;
+    z-index  : 2;
+}
+
+.navbar {
+    border-top   : 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.navbar-light {
+    background: #fff !important;
+}
+
+.list-unstyled {
+    margin-bottom: 1%;
+}
+
+.list-unstyled>li {
+    text-transform: uppercase;
+    padding-bottom: 5px
+}
+
+.list-unstyled>li>a {
+    color          : #565656;
+    font-size      : 12px;
+    font-weight    : 500;
+    text-transform : uppercase;
+    text-decoration: none;
+}
+
+li a .fas {
+    font-size: 12px;
+    margin   : 0 4px;
+}
+
+#bs-example-navbar-collapse-1 {
+    padding: 0;
+}
+
+.yamm .container {
+    position: inherit !important;
+}
+
+.yamm .yamm-content {
+    padding: 0px 20px 30px;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left : 0;
+}
+
+#logo {
+    margin: 0 25%;
+}
+
+.dropdown-menu {
+    border    : 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    margin-top: 10px;
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu {
+    padding-top: 10px !important;
+}
+
+/* Campo de busca */
+
+input.transparent-input {
+    background-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+input.transparent-input::placeholder {
+    color  : #FFF;
+    opacity: 1;
+}
+
+.busca-principal {
+    color      : #808283;
+    font-weight: bold;
+}
+
+.transparent-input::placeholder {
+    color: #808283 !important;
+}
+
+.transparent-input:focus {
+    color: #808283 !important;
+}
+
+.border-buscar {
+    border: 1px solid #969798 !important;
+}
+
+.menu-title {
+    min-height   : 42px;
+    margin-bottom: 5px;
+}
+
+.menu-title p {
+    text-transform: uppercase;
+    padding       : 5px;
+    font-size     : 14px;
+}
+
+.menu-title>div {
+    margin-right: 5px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.acessibilidade {
+    background-color: #FFF;
+    opacity         : 0.8;
+    color           : #000;
+}
+
+.acessibilidade a.nav-item {
+    color: #000;
+}
+
+.acessibilidade a.nav-item:link {
+    text-decoration: none;
+}
+
+.acessibilidade>ul {
+    margin-bottom: 0;
+}
+
+.acessibilidade .list-inline-item>a>span {
+    margin-bottom: 5px;
+}
+
+.btn-link {
+    padding      : 0;
+    margin-bottom: 2px;
+}
+
+.acessibilidade>.navbar .nav-link {
+    padding: 0 0.7rem;
+}
+
+.acessibilidade>.navbar {
+    border       : none;
+    margin-bottom: 0;
+    padding      : 0;
+}
+
+.acessibilidade>.navbar .btn-link {
+    color: #4f5152;
+}
+
+.link-menu {
+    margin-left: 3px;
+}
+
+/** RODAPE */
+
+footer.fixed-bottom {
+    position  : relative;
+    min-height: 100%;
+}
+
+footer li>a {
+    font-size: 12px;
+}
+
+.link-rodape {
+    margin-left: 5px;
+}
+
+.navbar-nav>li>.nav-link {
+    font-size  : 13px;
+    font-weight: bold;
+}
+
+.navbar {
+    padding: .3rem 1rem;
+}
+
+.dropdown-menu a.btn-menu {
+    margin: 2px 0 2px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-image {
+        height: 100% !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar-collapse ul.navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .navbar-collapse ul.navbar-nav .dropdown-menu {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-collapse ul.navbar-nav .dropdown-menu>div {
+        padding: 5px !important;
+    }
+
+    .navbar-collapse ul.navbar-nav .dropdown-menu>div ul {
+        margin-bottom: 1.2rem !important;
+    }
+}

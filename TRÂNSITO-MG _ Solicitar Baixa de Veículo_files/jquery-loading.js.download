@@ -1,0 +1,21 @@
+function startAjaxLoad() {
+	$(document).ajaxStart(function() {
+		showLoading();
+	}).ajaxStop(function() {
+		hideLoading();
+	});
+}
+
+$(function() {
+	$('form[show-loader],[show-loader=1],[show-loader=true]').submit(function() {
+		showLoading();
+	});
+});
+
+function showLoading() {
+	$('#loading').fadeIn('slow');
+}
+
+function hideLoading() {
+	$('#loading').fadeOut('slow');
+}

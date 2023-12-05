@@ -1,0 +1,46 @@
+@media print {
+
+    /* Inhaltsbreite setzen, Floats und Margins aufheben */
+    /* Achtung: Die Klassen und IDs variieren von Theme zu Theme. Hier also eigene Klassen setzen */
+    #content,
+    #page {
+        width : 100%;
+        margin: 0;
+        float : none;
+    }
+
+    body {
+        background : #fff;
+        font-size  : 1em;
+        line-height: 1.4;
+        margin     : 0;
+        padding    : 0;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .acessibilidade {
+        display: none;
+    }
+
+    .input-busca {
+        display: none;
+    }
+
+    div vw {
+        display: none;
+    }
+
+    .topo-pagina {
+        display: none;
+    }
+
+
+    .container>.row>.col-sm-8,
+    .container>.row>.col-sm-4 {
+        flex     : 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}

@@ -1,0 +1,262 @@
+/* responsividade */
+
+@media (max-width: 1140px) {}
+
+@media (max-width: 960px) {}
+
+@media (max-width: 720px) {
+    .h5 {
+        font-size: 18px !important;
+    }
+
+    .h4 {
+        font-size: 19px !important;
+    }
+
+    .btn {
+        width        : 100%;
+        margin-bottom: 10px;
+        float        : none;
+    }
+}
+
+@media (max-width: 576px) {
+    .h5 {
+        font-size: 16px !important;
+    }
+
+    .h4 {
+        font-size: 17px !important;
+    }
+}
+
+@media (max-width: 330px) {
+    .h5 {
+        font-size: 8px !important
+    }
+
+    .h4 {
+        font-size: 9px !important;
+    }
+}
+
+
+/* Campos obrigatÃ³rios */
+
+.required>label:after {
+    content: ' *';
+    color  : #ff0212;
+}
+
+
+/* Actions */
+
+form.actions>*,
+div.actions>*,
+td.actions>* {
+    margin-right: 5px;
+}
+
+td.actions .btn {
+    width: 35px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-pointer:hover {
+    text-decoration: underline;
+}
+
+.text-mais-menos:before {
+    content        : " + ";
+    text-decoration: none;
+    min-width      : 50px;
+}
+
+.text-mais-menos.menos:before {
+    content        : " - ";
+    text-decoration: none;
+}
+
+.error-message.invalid-feedback {
+    display: block;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 3%;
+}
+
+/* .select2-container .select2-selection--single {
+    height     : 38px !important;
+    padding-top: 5px;
+    border     : 1px solid #ccc !important;
+}
+
+.select2-container .select2-selection--multiple {
+    height: 38px !important;
+}
+ */
+
+/* Elementos desabilitados */
+:disabled {
+    cursor: not-allowed;
+}
+
+/* Css tabela datatable */
+td.details-control:before {
+    content     : '+';
+    font-size   : 20px;
+    padding-left: 25%;
+    cursor      : pointer;
+}
+
+tr.shown td.details-control:before {
+    content     : '-';
+    font-size   : 20px;
+    padding-left: 35%;
+    cursor      : pointer;
+}
+
+.form-group .text-muted {
+    width: 100%;
+}
+
+@font-face {
+    font-family: placamercosul;
+    src: url('../font/fe-font.ttf');
+}
+
+@font-face {
+    font-family: placa-cinza;
+    /*src: url('../font/mandatory.ttf');*/
+    src: url('../font/LicenzPlate-jDKO.ttf');
+}
+
+.placa {
+    background-image: url('../img/placas_padrao_mercosul.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* font-weight: bold; */
+    margin: 0 auto;
+    height: 142px;
+    width: 450px;
+}
+
+.placa-particular {
+    background-position: 0px -3px;
+    color: #000000;
+}
+
+.placa-comercial{
+    background-position: 0px -143px;
+    color: #77191A;
+}
+
+.placa-oficial {
+    background-position: 0px -283px;
+    color: #09358E;
+}
+
+.placa-diplomatico {
+    background-position: 0px -423px;
+    color: #F4CC0B;
+}
+
+.placa-especial {
+    background-position: 0px -563px;
+    color: #046204;
+}
+
+.placa-colecao {
+    background-position: 0px -703px;
+    color: #5F5F5F;
+}
+
+.numero-placa {
+    font-family: placamercosul; 
+    font-size: 5.3em;
+    position: relative;
+    left: 56px;
+    top: 30px;
+}
+
+.placa-cinza {
+    background-image: url('../img/placa_cinza.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* font-weight: bold; */
+    margin: 0 auto;
+    height: 145px;
+    width: 450px;
+}
+
+.numero-placa-cinza {
+    font-family: placa-cinza;
+    /*font-size: 5.3em;*/
+    font-size: 6.3em;
+    position: relative;
+    text-align: center;
+    /* left: 56px;*/
+    top: 30px;
+}
+
+.reserva-placas .form-check-input {
+    position: initial;
+    margin-top: .3rem;
+    margin-left: 0;
+}
+
+select[readonly] {
+    pointer-events: none;
+}
+
+.btns-opcao-pagamento button {
+    min-width: 200px;
+    min-height: 60px;
+    font-size: 17px;
+} 
+
+/* responsividade placa */
+
+@media (max-width: 1140px) {}
+
+@media (max-width: 960px) {}
+
+@media (max-width: 720px) {}
+
+@media (max-width: 576px) {
+    .placa {
+        background-size: cover;
+        height: 95px;
+        width: 300px;
+    }
+    .placa-cinza {
+        background-size: cover;
+        height: 97px;
+        width: 300px;
+    }
+    .numero-placa-cinza, .numero-placa {
+        font-size: 3.7em;
+        top: 18px;
+    }
+}
+
+@media (max-width: 330px) {
+    .placa {
+        background-size: cover;
+        height: 80px;
+        width: 300px;
+    }
+    .placa-cinza {
+        background-size: cover;
+        height: 82px;
+        width: 450px;
+    }
+    .numero-placa-cinza, .numero-placa {
+        font-size: 3.0em;
+        top: 16px;
+    }
+}

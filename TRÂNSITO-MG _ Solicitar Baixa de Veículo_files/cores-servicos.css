@@ -1,0 +1,1020 @@
+:root {
+    --cor-default-link         : #6f7174;
+    --servico-habilitacao-cor-1: #99cc33;
+    --servico-habilitacao-cor-2: #8fb019;
+    --servico-habilitacao-cor-3: #f2f5e9;
+    --servico-habilitacao-cor-4: #007c15;
+    --servico-habilitacao-cor-5: #8c9c55;
+    --servico-veiculos-cor-1   : #3f94da;
+    --servico-veiculos-cor-2   : #64B5F6;
+    --servico-veiculos-cor-3   : #e6eff3;
+    --servico-veiculos-cor-4   : #0063f8;
+    --servico-veiculos-cor-5   : #79a4c7;
+    --servico-infracoes-cor-1  : #ee782e;
+    --servico-infracoes-cor-2  : #ffa46d;
+    --servico-infracoes-cor-3  : #fbf0e8;
+    --servico-infracoes-cor-4  : #ff5100;
+    --servico-infracoes-cor-5  : #d09069;
+    /*
+    --servico-default-cor-1    : #6f7174;
+    --servico-default-cor-2    : #878c92;
+    --servico-default-cor-3    : #e9ecef;
+    --servico-default-cor-4    : #3a3a3a;
+    */
+}
+
+/** GERAL */
+
+.breadcrumb-item .active {
+    color: var(--cor-default-link) !important;
+}
+
+.autenticacao a.nav-item {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.autenticacao a.nav-item:hover {
+    color: var(--servico-default-cor-2) !important;
+}
+
+.post .titulo-servico-detran {
+    color: var(--cor-default-link) !important;
+}
+
+.termos-uso {
+    background-color: var(--servico-default-cor-4) !important;
+}
+
+.termos-uso-2 {
+    background-color: var(--servico-default-cor-4) !important;
+}
+
+.menu-list a {
+    color     : var(--cor-default-link) !important;
+    margin-top: 4px;
+}
+
+.link-rodape.classe-pai {
+    color      : var(--servico-default-cor-1) !important;
+    margin-left: 0;
+    font-weight: bold;
+}
+
+.link-rodape.classe-pai:hover {
+    color: var(--servico-default-cor-2) !important;
+}
+
+.menu-list a:hover {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.links-vertical a.btn-menu {
+    color: var(--cor-default-link) !important;
+}
+
+.links-vertical a.btn-menu:hover {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.links-vertical a.btn-menu svg {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.page-item.active .page-link {
+    color           : #fff !important;
+    background-color: var(--servico-default-cor-1) !important;
+    border-color    : var(--servico-default-cor-1) !important;
+}
+
+.page-link {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.midias-sociais svg {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.list-group a.div-icons-veiculos {
+    background-color: var(--servico-veiculos-cor-3) !important;
+}
+
+.list-group a.div-icons-habilitacao {
+    background-color: var(--servico-habilitacao-cor-3) !important;
+}
+
+.list-group a.div-icons-infracoes {
+    background-color: var(--servico-infracoes-cor-3) !important;
+}
+
+.list-group a.div-icons-parceiros,
+.list-group a.div-icons-atendimento,
+.list-group a.div-icons-institucional,
+.list-group a.div-icons-educacao {
+    background-color: var(--servico-default-cor-4) !important;
+}
+
+.list-group a.div-icons-veiculos:hover {
+    background-color: var(--servico-veiculos-cor-5) !important;
+    color           : white;
+}
+
+.list-group a.div-icons-habilitacao:hover {
+    background-color: var(--servico-habilitacao-cor-5) !important;
+    color           : white;
+
+}
+
+.list-group a.div-icons-parceiros:hover,
+.list-group a.div-icons-atendimento:hover,
+.list-group a.div-icons-institucional:hover,
+.list-group a.div-icons-educacao:hover {
+    background-color: var(--servico-default-cor-3) !important;
+    color           : white;
+
+}
+
+.list-group a.div-icons-infracoes:hover {
+    background-color: var(--servico-infracoes-cor-5) !important;
+    color           : white;
+
+}
+
+/** CORES DEFAULT */
+
+.servico-default .btn-primary,
+.servico-default .text-primary,
+.servico-default .badge-primary,
+.servico-default .btn-primary:not(:disabled):not(.disabled):active {
+    color           : #fff;
+    background-color: var(--servico-default-cor-1);
+    border-color    : var(--servico-default-cor-1);
+}
+
+.servico-default .btn-primary:hover {
+    background-color: var(--servico-default-cor-2) !important;
+    border-color    : var(--servico-default-cor-2) !important;
+}
+
+.servico-default .btn-primary.focus,
+.servico-default .btn-primary:focus,
+.servico-default .btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem var(--servico-default-cor-3) !important;
+}
+
+.servico-default .text-primary {
+    color: var(--servico-default-cor-1);
+}
+
+.servico-default .list-group-item:focus,
+.servico-default .list-group-item:hover {
+    background-color: var(--servico-default-cor-4);
+}
+
+.servico-default .breadcrumb a {
+    color: var(--servico-default-cor-1);
+}
+
+.servico-default .titulo-categoria-servico-detran,
+.servico-default .titulo-categoria-servico-detran>a {
+    color: var(--servico-default-cor-2);
+}
+
+.servico-default .titulo-servico-detran {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.servico-default .detran-servico-descricao {
+    background-color: var(--servico-default-cor-4);
+}
+
+.servico-default .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-default-cor-1);
+}
+
+.servico-default .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-default-cor-1);
+}
+
+.servico-default .bs-wizard>.bs-wizard-step>.progress>.progress-bar {
+    background: var(--servico-default-cor-1);
+}
+
+.servico-default .bs-wizard>.bs-wizard-step>.bs-wizard-dot:after {
+    background: var(--servico-default-cor-2);
+}
+
+.servico-default .detran-lateral-card h1,
+.servico-default .detran-lateral-card h2,
+.servico-default .detran-lateral-card h3,
+.servico-default .detran-lateral-card h4,
+.servico-default .detran-lateral-card h5,
+.servico-default .detran-lateral-card h6 {
+    color: var(--servico-default-cor-1);
+}
+
+.dropdown-menu a.btn-menu {
+    color             : var(--cor-default-link);
+    font-size         : 11px;
+    /* font-weight    : 500; */
+    text-transform    : uppercase;
+    text-decoration   : none;
+    display           : block;
+}
+
+.div-icons-parceiros>.card,
+.div-icons-educacao>.card,
+.div-icons-atendimento>.card,
+.div-icons-institucional>.card {
+    background-color: var(--servico-default-cor-1);
+    border          : var(--servico-default-cor-3);
+}
+
+.div-icons-parceiros>.card:hover,
+.div-icons-educacao>.card:hover,
+.div-icons-atendimento>.card:hover,
+.div-icons-institucional>.card:hover {
+    background-color: var(--servico-default-cor-2);
+}
+
+.div-icons-parceiros .btn-menu svg,
+.div-icons-educacao .btn-menu svg,
+.div-icons-atendimento .btn-menu svg,
+.div-icons-institucional .btn-menu svg {
+    font-size: 12px;
+    color    : var(--servico-default-cor-1);
+}
+
+.div-icons-parceiros>.menu-title,
+.div-icons-educacao>.menu-title,
+.div-icons-atendimento>.menu-title,
+.div-icons-institucional>.menu-title {
+    color         : var(--servico-default-cor-1) !important;
+    /* font-weight: bold; */
+}
+
+.div-icons-parceiros .titulo-servico-detran,
+.div-icons-educacao .titulo-servico-detran,
+.div-icons-atendimento .titulo-servico-detran,
+.div-icons-institucional .titulo-servico-detran {
+    color      : var(--servico-default-cor-1) !important;
+    font-weight: bold;
+}
+
+.div-icons-parceiros .menu-title span.titulo-servico-detran:hover,
+.div-icons-educacao .menu-title span.titulo-servico-detran:hover,
+.div-icons-atendimento .menu-title span.titulo-servico-detran:hover,
+.div-icons-institucional .menu-title span.titulo-servico-detran:hover {
+    color: var(--servico-default-cor-2) !important;
+}
+
+.div-icons-parceiros .link-mais-opcoes,
+.div-icons-educacao .link-mais-opcoes,
+.div-icons-atendimento .link-mais-opcoes,
+.div-icons-institucional .link-mais-opcoes {
+    color      : var(--servico-default-cor-1) !important;
+    font-weight: bold;
+}
+
+.div-icons-parceiros .link-mais-opcoes:hover,
+.div-icons-educacao .link-mais-opcoes:hover,
+.div-icons-atendimento .link-mais-opcoes:hover,
+.div-icons-institucional .link-mais-opcoes:hover {
+    color      : var(--servico-default-cor-2) !important;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--cor-default-link);
+}
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover,
+.dropdown-menu a.btn-menu:hover,
+.menu-list a:hover,
+.menu-title span.titulo-servico-detran:hover {
+    color: var(--servico-default-cor-1);
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/** CORES HABILITACAO */
+
+.servico-habilitacao .page-link {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.servico-habilitacao .page-item.active .page-link {
+    color           : #fff !important;
+    background-color: var(--servico-habilitacao-cor-1) !important;
+    border-color    : var(--servico-habilitacao-cor-1) !important;
+}
+
+.text-habilitacao {
+    color: var(--servico-habilitacao-cor-1) !important;
+}
+
+.btn-habilitacao,
+.btn-habilitacao:not(:disabled):not(.disabled):active,
+.servico-habilitacao .btn-primary,
+.servico-habilitacao .text-primary,
+.servico-habilitacao .badge-primary .servico-habilitacao .btn-primary:not(:disabled):not(.disabled):active {
+    color           : #fff !important;
+    background-color: var(--servico-habilitacao-cor-1) !important;
+    border-color    : var(--servico-habilitacao-cor-1) !important;
+}
+
+.btn-habilitacao:hover,
+.servico-habilitacao .btn-primary:hover {
+    background-color: var(--servico-habilitacao-cor-2) !important;
+    border-color    : var(--servico-habilitacao-cor-2) !important;
+}
+
+.btn-habilitacao:focus .servico-habilitacao .btn-primary.focus,
+.servico-habilitacao .btn-primary:focus,
+.servico-habilitacao .btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem var(--servico-habilitacao-cor-3) !important;
+}
+
+a.btn-habilitacao:hover {
+    color: #fff !important;
+}
+
+.servico-habilitacao .breadcrumb a {
+    color: var(--servico-habilitacao-cor-1) !important;
+}
+
+.servico-habilitacao .titulo-categoria-servico-detran,
+.servico-habilitacao .titulo-categoria-servico-detran>a {
+    color: var(--servico-habilitacao-cor-2) !important;
+}
+
+.servico-habilitacao .titulo-servico-detran {
+    color: var(--servico-habilitacao-cor-1) !important;
+}
+
+.servico-habilitacao .detran-servico-descricao {
+    background-color: var(--servico-habilitacao-cor-3) !important;
+}
+
+.servico-habilitacao .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-habilitacao-cor-1);
+}
+
+.servico-habilitacao .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-habilitacao-cor-2);
+}
+
+.servico-habilitacao .bs-wizard>.bs-wizard-step>.progress>.progress-bar {
+    background: var(--servico-habilitacao-cor-2);
+}
+
+.servico-habilitacao .bs-wizard>.bs-wizard-step>.bs-wizard-dot:after {
+    background: var(--servico-habilitacao-cor-1);
+}
+
+.servico-habilitacao .detran-lateral-card h5 {
+    color: var(--servico-habilitacao-cor-1);
+}
+
+.div-icons-habilitacao>.card {
+    background-color: var(--servico-habilitacao-cor-1);
+    border          : var(--servico-habilitacao-cor-3);
+}
+
+.div-icons-habilitacao>.card:hover {
+    background-color: var(--servico-habilitacao-cor-2);
+}
+
+.dropdown-menu .div-icons-habilitacao a.btn-menu:hover,
+li.menu-icons-habilitacao .nav-link,
+.div-icons-habilitacao .menu-list a:hover {
+    background-color: #fff;
+    color           : var(--servico-habilitacao-cor-1) !important;
+}
+
+li.menu-icons-habilitacao .nav-link:hover {
+    color: var(--servico-habilitacao-cor-2) !important;
+}
+
+.div-icons-habilitacao .btn-menu svg {
+    font-size: 12px;
+    color    : var(--servico-habilitacao-cor-1);
+}
+
+.div-icons-habilitacao>.menu-title {
+    color: var(--servico-habilitacao-cor-2) !important;
+}
+
+.div-icons-habilitacao .titulo-servico-detran {
+    color      : var(--servico-habilitacao-cor-1) !important;
+    font-weight: bold;
+}
+
+.div-icons-habilitacao .menu-title span.titulo-servico-detran:hover {
+    color: var(--servico-habilitacao-cor-2) !important;
+}
+
+.div-icons-habilitacao .link-mais-opcoes {
+    color      : var(--servico-habilitacao-cor-2) !important;
+    font-weight: bold;
+}
+
+.div-icons-habilitacao .link-mais-opcoes:hover {
+    color      : var(--servico-habilitacao-cor-1) !important;
+    font-weight: bold;
+}
+
+
+/** CORES VEICULOS */
+
+.servico-veiculos .page-link {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.servico-veiculos .page-item.active .page-link {
+    color           : #fff !important;
+    background-color: var(--servico-veiculos-cor-1) !important;
+    border-color    : var(--servico-veiculos-cor-1) !important;
+}
+
+.text-veiculos {
+    color: var(--servico-veiculos-cor-1) !important;
+}
+
+.btn-veiculos,
+.btn-veiculos:not(:disabled):not(.disabled):active .servico-veiculos .btn-primary,
+.servico-veiculos .text-primary,
+.servico-veiculos .badge-primary,
+.servico-veiculos .btn-primary:not(:disabled):not(.disabled):active {
+    color           : #fff;
+    background-color: var(--servico-veiculos-cor-1);
+    border-color    : var(--servico-veiculos-cor-1);
+}
+
+a.btn-veiculos:hover {
+    color: #fff !important;
+}
+
+.btn-veiculos:hover,
+.servico-veiculos .btn-primary:hover {
+    background-color: var(--servico-veiculos-cor-2) !important;
+    border-color    : var(--servico-veiculos-cor-2) !important;
+}
+
+.btn-veiculos:focus,
+.servico-veiculos .btn-primary.focus,
+.servico-veiculos .btn-primary:focus,
+.servico-veiculos .btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem var(--servico-veiculos-cor-3) !important;
+}
+
+.servico-veiculos .breadcrumb a {
+    color: var(--servico-veiculos-cor-1) !important;
+}
+
+.servico-veiculos .titulo-categoria-servico-detran,
+.servico-veiculos .titulo-categoria-servico-detran>a {
+    color: var(--servico-veiculos-cor-2) !important;
+}
+
+.servico-veiculos .titulo-servico-detran {
+    color: var(--servico-veiculos-cor-1) !important;
+}
+
+.servico-veiculos .detran-servico-descricao {
+    background-color: var(--servico-veiculos-cor-3) !important;
+}
+
+.servico-veiculos .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-veiculos-cor-1);
+}
+
+.servico-veiculos .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-veiculos-cor-2);
+}
+
+.servico-veiculos .bs-wizard>.bs-wizard-step>.progress>.progress-bar {
+    background: var(--servico-veiculos-cor-2);
+}
+
+.servico-veiculos .bs-wizard>.bs-wizard-step>.bs-wizard-dot:after {
+    background: var(--servico-veiculos-cor-1);
+}
+
+.servico-veiculos .detran-lateral-card h5 {
+    color: var(--servico-veiculos-cor-1);
+}
+
+
+
+.dropdown-menu .div-icons-veiculos a.btn-menu:hover,
+li.menu-icons-veiculos .nav-link,
+.div-icons-veiculos .menu-list a:hover {
+    background-color: #fff;
+    color           : var(--servico-veiculos-cor-1) !important;
+}
+
+.div-icons-veiculos>.menu-title {
+    color         : var(--servico-veiculos-cor-1) !important;
+    /* font-weight: bold; */
+}
+
+li.menu-icons-veiculos .nav-link:hover {
+    color: var(--servico-veiculos-cor-2) !important;
+}
+
+.div-icons-veiculos>.card {
+    background-color: var(--servico-veiculos-cor-1);
+    border          : var(--servico-veiculos-cor-3);
+}
+
+.div-icons-veiculos>.card:hover {
+    background-color: var(--servico-veiculos-cor-2);
+}
+
+.div-icons-veiculos .btn-menu svg {
+    font-size: 12px;
+    color    : var(--servico-veiculos-cor-1);
+}
+
+.div-icons-veiculos .titulo-servico-detran {
+    color      : var(--servico-veiculos-cor-1) !important;
+    font-weight: bold;
+}
+
+.div-icons-veiculos .menu-title span.titulo-servico-detran:hover {
+    color: var(--servico-veiculos-cor-2) !important;
+}
+
+.div-icons-veiculos .link-mais-opcoes {
+    color      : var(--servico-veiculos-cor-1) !important;
+    font-weight: bold;
+}
+
+.div-icons-veiculos .link-mais-opcoes:hover {
+    color: var(--servico-veiculos-cor-2) !important;
+}
+
+.servico-veiculos .detran-servico-descricao h1,
+.servico-veiculos .detran-servico-descricao h2,
+.servico-veiculos .detran-servico-descricao h3,
+.servico-veiculos .detran-servico-descricao h4,
+.servico-veiculos .detran-servico-descricao h5,
+.servico-veiculos .detran-servico-descricao h6 {
+    background-color: var(--servico-veiculos-cor-5) !important;
+    padding         : 5px 10px;
+    border-radius   : 5px;
+    margin-bottom   : 15px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-infracoes .detran-servico-descricao h1,
+.servico-infracoes .detran-servico-descricao h2,
+.servico-infracoes .detran-servico-descricao h3,
+.servico-infracoes .detran-servico-descricao h4,
+.servico-infracoes .detran-servico-descricao h5,
+.servico-infracoes .detran-servico-descricao h6 {
+    background-color: var(--servico-infracoes-cor-5) !important;
+    padding         : 5px 10px;
+    border-radius   : 5px;
+    margin-bottom   : 15px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-habilitacao .detran-servico-descricao h1,
+.servico-habilitacao .detran-servico-descricao h2,
+.servico-habilitacao .detran-servico-descricao h3,
+.servico-habilitacao .detran-servico-descricao h4,
+.servico-habilitacao .detran-servico-descricao h5,
+.servico-habilitacao .detran-servico-descricao h6 {
+    background-color: var(--servico-habilitacao-cor-5) !important;
+    padding         : 5px 10px;
+    border-radius   : 5px;
+    margin-bottom   : 15px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-default .detran-servico-descricao h1,
+.servico-default .detran-servico-descricao h2,
+.servico-default .detran-servico-descricao h3,
+.servico-default .detran-servico-descricao h4,
+.servico-default .detran-servico-descricao h5,
+.servico-default .detran-servico-descricao h6 {
+    background-color: var(--servico-default-cor-3) !important;
+    padding         : 5px 10px;
+    border-radius   : 5px;
+    margin-bottom   : 15px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+/* Tamanhos dos H dos conteudos nas telas de serviços */
+.detran-servico-descricao .h1,
+.detran-servico-descricao h1 {
+    font-size: 2.2rem;
+}
+
+.detran-servico-descricao .h2,
+.detran-servico-descricao h2 {
+    font-size: 1.8rem;
+}
+
+.detran-servico-descricao .h3,
+.detran-servico-descricao h3 {
+    font-size: 1.5rem;
+}
+
+.detran-servico-descricao .h4,
+.detran-servico-descricao h4 {
+    font-size: 1.2rem;
+}
+
+.detran-servico-descricao .h5,
+.detran-servico-descricao h5 {
+    font-size: 1rem;
+}
+
+.detran-servico-descricao .h6,
+.detran-servico-descricao h6 {
+    font-size: 0.75rem;
+}
+
+/* Tamanhos dos H nas telas de resultados de serviços */
+.servico-default #content h1,
+.servico-habilitacao #content h1,
+.servico-infracoes #content h1,
+.servico-veiculos #content h1 {
+    font-size: 1.6rem !important;
+}
+
+.servico-default #content h2,
+.servico-habilitacao #content h2,
+.servico-infracoes #content h2,
+.servico-veiculos #content h2 {
+    font-size: 1.4rem !important;
+}
+
+.servico-default #content h3,
+.servico-habilitacao #content h3,
+.servico-infracoes #content h3,
+.servico-veiculos #content h3 {
+    font-size: 1.2rem !important;
+}
+
+.servico-default #content h4,
+.servico-habilitacao #content h4,
+.servico-infracoes #content h4,
+.servico-veiculos #content h4 {
+    font-size: 1rem !important;
+}
+
+.servico-default #content h5,
+.servico-habilitacao #content h5,
+.servico-infracoes #content h5,
+.servico-veiculos #content h5 {
+    font-size: 0.8rem !important;
+}
+
+.servico-default #content h6,
+.servico-habilitacao #content h6,
+.servico-infracoes #content h6,
+.servico-veiculos #content h6 {
+    font-size: 0.6rem !important;
+}
+
+
+.servico-veiculos #content h1,
+.servico-veiculos #content h2,
+.servico-veiculos #content h3,
+.servico-veiculos #content h4,
+.servico-veiculos #content h5,
+.servico-veiculos #content h6 {
+    background-color: var(--servico-veiculos-cor-2) !important;
+    padding         : 3px 1rem;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff !important;
+}
+
+.servico-infracoes #content h1,
+.servico-infracoes #content h2,
+.servico-infracoes #content h3,
+.servico-infracoes #content h4,
+.servico-infracoes #content h5,
+.servico-infracoes #content h6 {
+    background-color: var(--servico-infracoes-cor-2) !important;
+    padding         : 3px 1rem;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff !important;
+}
+
+.servico-habilitacao #content h1,
+.servico-habilitacao #content h2,
+.servico-habilitacao #content h3,
+.servico-habilitacao #content h4,
+.servico-habilitacao #content h5,
+.servico-habilitacao #content h6 {
+    background-color: var(--servico-habilitacao-cor-1) !important;
+    padding         : 3px 1rem;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff !important;
+}
+
+.servico-default #content h1,
+.servico-default #content h2,
+.servico-default #content h3,
+.servico-default #content h4,
+.servico-default #content h5,
+.servico-default #content h6 {
+    background-color: var(--servico-default-cor-2) !important;
+    padding         : 3px 1rem;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff !important;
+}
+
+.servico-default .detran-lateral-card #detran-servico-descricao h1,
+.servico-default .detran-lateral-card #detran-servico-descricao h2,
+.servico-default .detran-lateral-card #detran-servico-descricao h3,
+.servico-default .detran-lateral-card #detran-servico-descricao h4,
+.servico-default .detran-lateral-card #detran-servico-descricao h5,
+.servico-default .detran-lateral-card #detran-servico-descricao h6 {
+    background-color: var(--servico-default-cor-3) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-default .article h1,
+.servico-default .article h2,
+.servico-default .article h3,
+.servico-default .article h4,
+.servico-default .article h5,
+.servico-default .article h6 {
+    background-color: var(--servico-default-cor-3) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+
+/* COres titulo docs necessarios*/
+.servico-veiculos .detran-lateral-card #detran-servico-descricao h1,
+.servico-veiculos .detran-lateral-card #detran-servico-descricao h2,
+.servico-veiculos .detran-lateral-card #detran-servico-descricao h3,
+.servico-veiculos .detran-lateral-card #detran-servico-descricao h4,
+.servico-veiculos .detran-lateral-card #detran-servico-descricao h5,
+.servico-veiculos .detran-lateral-card #detran-servico-descricao h6 {
+    background-color: var(--servico-veiculos-cor-5) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-veiculos .article h1,
+.servico-veiculos .article h2,
+.servico-veiculos .article h3,
+.servico-veiculos .article h4,
+.servico-veiculos .article h5,
+.servico-veiculos .article h6 {
+    background-color: var(--servico-veiculos-cor-5) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-infracoes .detran-lateral-card #detran-servico-descricao h1,
+.servico-infracoes .detran-lateral-card #detran-servico-descricao h2,
+.servico-infracoes .detran-lateral-card #detran-servico-descricao h3,
+.servico-infracoes .detran-lateral-card #detran-servico-descricao h4,
+.servico-infracoes .detran-lateral-card #detran-servico-descricao h5,
+.servico-infracoes .detran-lateral-card #detran-servico-descricao h6 {
+    background-color: var(--servico-infracoes-cor-5) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-infracoes .article h1,
+.servico-infracoes .article h2,
+.servico-infracoes .article h3,
+.servico-infracoes .article h4,
+.servico-infracoes .article h5,
+.servico-infracoes .article h6 {
+    background-color: var(--servico-infracoes-cor-5) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-habilitacao .detran-lateral-card #detran-servico-descricao h1,
+.servico-habilitacao .detran-lateral-card #detran-servico-descricao h2,
+.servico-habilitacao .detran-lateral-card #detran-servico-descricao h3,
+.servico-habilitacao .detran-lateral-card #detran-servico-descricao h4,
+.servico-habilitacao .detran-lateral-card #detran-servico-descricao h5,
+.servico-habilitacao .detran-lateral-card #detran-servico-descricao h6 {
+    background-color: var(--servico-habilitacao-cor-5) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.servico-habilitacao .article h1,
+.servico-habilitacao .article h2,
+.servico-habilitacao .article h3,
+.servico-habilitacao .article h4,
+.servico-habilitacao .article h5,
+.servico-habilitacao .article h6 {
+    background-color: var(--servico-habilitacao-cor-5) !important;
+    padding         : 3px 6px;
+    border-radius   : 5px;
+    margin-bottom   : 8px;
+    font-weight     : bold;
+    color           : #fff;
+}
+
+.detran-lateral-card #detran-servico-descricao .h1,
+.detran-lateral-card #detran-servico-descricao h1 {
+    font-size: 1.20rem;
+}
+
+.detran-lateral-card #detran-servico-descricao .h2,
+.detran-lateral-card #detran-servico-descricao h2 {
+    font-size: 1.1rem;
+}
+
+.detran-lateral-card #detran-servico-descricao .h3,
+.detran-lateral-card #detran-servico-descricao h3 {
+    font-size: 1rem;
+}
+
+.detran-lateral-card #detran-servico-descricao .h4,
+.detran-lateral-card #detran-servico-descricao h4 {
+    font-size: 0.9rem;
+}
+
+.detran-lateral-card #detran-servico-descricao .h5,
+.detran-lateral-card #detran-servico-descricao h5 {
+    font-size: 0.8rem;
+}
+
+.detran-lateral-card #detran-servico-descricao .h6,
+.detran-lateral-card #detran-servico-descricao h6 {
+    font-size: 0.7rem;
+}
+
+/** CORES INFRAÇÕES */
+
+.servico-infracoes .page-link {
+    color: var(--servico-default-cor-1) !important;
+}
+
+.text-infracoes {
+    color: var(--servico-infracoes-cor-1) !important;
+}
+
+.servico-infracoes .page-item.active .page-link {
+    color           : #fff !important;
+    background-color: var(--servico-infracoes-cor-1) !important;
+    border-color    : var(--servico-infracoes-cor-1) !important;
+}
+
+.btn-infracoes,
+.btn-infracoes:not(:disabled):not(.disabled):active,
+.servico-infracoes .btn-primary,
+.servico-infracoes .text-primary,
+.servico-infracoes .badge-primary,
+.servico-infracoes .btn-primary:not(:disabled):not(.disabled):active {
+    color           : #fff;
+    background-color: var(--servico-infracoes-cor-1);
+    border-color    : var(--servico-infracoes-cor-1);
+}
+
+.btn-infracoes:hover,
+.servico-infracoes .btn-primary:hover {
+    background-color: var(--servico-infracoes-cor-2) !important;
+    border-color    : var(--servico-infracoes-cor-2) !important;
+}
+
+.btn-infracoes:focus,
+.btn-infracoes:not(:disabled):not(.disabled):active:focus,
+.servico-infracoes .btn-primary.focus,
+.servico-infracoes .btn-primary:focus,
+.servico-infracoes .btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem var(--servico-infracoes-cor-3) !important;
+}
+
+.servico-infracoes .breadcrumb a {
+    color: var(--servico-infracoes-cor-1) !important;
+}
+
+.servico-infracoes .titulo-categoria-servico-detran,
+.servico-infracoes .titulo-categoria-servico-detran>a {
+    color: var(--servico-infracoes-cor-2) !important;
+}
+
+.servico-infracoes .titulo-servico-detran {
+    color: var(--servico-infracoes-cor-1) !important;
+}
+
+.servico-infracoes .detran-servico-descricao {
+    background-color: var(--servico-infracoes-cor-3) !important;
+}
+
+.servico-infracoes .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-infracoes-cor-1);
+}
+
+.servico-infracoes .bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    background: var(--servico-infracoes-cor-2);
+}
+
+.servico-infracoes .bs-wizard>.bs-wizard-step>.progress>.progress-bar {
+    background: var(--servico-infracoes-cor-2);
+}
+
+.servico-infracoes .bs-wizard>.bs-wizard-step>.bs-wizard-dot:after {
+    background: var(--servico-infracoes-cor-1);
+}
+
+.servico-infracoes .detran-lateral-card h5 {
+    color: var(--servico-infracoes-cor-1);
+}
+
+.dropdown-menu .div-icons-infracoes a.btn-menu:hover,
+li.menu-icons-infracoes .nav-link,
+.div-icons-infracoes .menu-list a:hover,
+.div-icons-infracoes .menu-title span.titulo-servico-detran:hover {
+    background-color: #fff;
+    color           : var(--servico-infracoes-cor-1) !important;
+}
+
+.div-icons-infracoes>.menu-title {
+    color         : var(--servico-infracoes-cor-1) !important;
+    /* font-weight: bold; */
+}
+
+li.menu-icons-infracoes .nav-link:hover {
+    color: var(--servico-infracoes-cor-2) !important;
+}
+
+.div-icons-infracoes>.card {
+    background-color: var(--servico-infracoes-cor-1);
+    border          : var(--servico-infracoes-cor-3);
+}
+
+.div-icons-infracoes>.card:hover {
+    background-color: var(--servico-infracoes-cor-2);
+}
+
+.div-icons-infracoes .btn-menu svg {
+    font-size: 12px;
+    color    : var(--servico-infracoes-cor-2);
+}
+
+a.btn-infracoes:hover {
+    color: #fff !important;
+}
+
+.div-icons-infracoes .titulo-servico-detran {
+    color      : var(--servico-infracoes-cor-2) !important;
+    font-weight: bold;
+}
+
+.div-icons-infracoes .menu-title span.titulo-servico-detran:hover {
+    color: var(--servico-infracoes-cor-1) !important;
+}
+
+.div-icons-infracoes .link-mais-opcoes {
+    color      : var(--servico-infracoes-cor-1) !important;
+    font-weight: bold;
+}
+
+.div-icons-infracoes .link-mais-opcoes:hover {
+    color      : var(--servico-infracoes-cor-2) !important;
+    font-weight: bold;
+}

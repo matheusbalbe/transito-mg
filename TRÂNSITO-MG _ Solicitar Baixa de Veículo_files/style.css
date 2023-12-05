@@ -1,0 +1,469 @@
+body {
+    background : #f8f9fa;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size  : 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+/* Tamanhos dos H dos conteudos nas telas de serviços */
+.article .h1,
+.article h1 {
+    font-size: 2.2rem;
+}
+
+.article .h2,
+.article h2 {
+    font-size: 1.8rem;
+}
+
+.article .h3,
+.article h3 {
+    font-size: 1.5rem;
+}
+
+.article .h4,
+.article h4 {
+    font-size: 1.2rem;
+}
+
+.article .h5,
+.article h5 {
+    font-size: 1rem;
+}
+
+.article .h6,
+.article h6 {
+    font-size: 0.75rem;
+}
+
+
+.g-recaptcha>div {
+    margin: 0 auto;
+}
+
+.icone-rodape {
+    width     : auto !important;
+    max-width : 220px;
+    max-height: 110px;
+}
+
+.topo-pagina {
+    background-color: var(--servico-default-cor-1) !important;
+    color           : #fff;
+    position        : fixed;
+    cursor          : pointer;
+    z-index         : 9999;
+    border-radius   : 3px 3px 3px 3px;
+    padding-left    : 6px;
+    right           : 20px;
+    bottom          : 33px;
+    width           : 43px;
+    height          : 43px;
+    opacity         : 0.65;
+    -moz-opacity    : 0.65;
+    filter          : alpha(opacity=65);
+    font-size       : 30px !important;
+}
+
+.menu-list {
+    font-size      : 12px;
+    list-style-type: none !important;
+}
+
+.menu-title span.titulo-servico-detran,
+.menu-title a {
+    font-size      : 16px;
+    text-decoration: none;
+}
+
+a.btn-menu {
+    font-weight       : 500;
+    /* text-transform : uppercase; */
+    text-decoration   : none;
+    display           : block;
+}
+
+
+
+
+.dropdown-menu {
+    z-index: 1050;
+}
+
+.card>.btn-mais-opcoes {
+    color          : white;
+    text-align     : center;
+    text-decoration: none;
+    display        : inline-block;
+}
+
+.btn-mais-opcoes svg {
+    color: white;
+}
+
+.stretched-link::after {
+    position        : absolute;
+    top             : 0;
+    right           : 0;
+    bottom          : 0;
+    left            : 0;
+    z-index         : 1;
+    pointer-events  : auto;
+    content         : "";
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.accordion .btn-link {
+    color: #FFF !important;
+}
+
+.accordion>.card .card-header {
+    padding: 5px 10px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color           : #fff;
+    background-color: #6c757d;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0.25rem 0.25rem 0 0;
+    color        : #565656;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius : 0;
+    border-top-right-radius: 0;
+}
+
+small.text-muted {
+    width  : 120px;
+    padding: 0 5px;
+}
+
+.img-cont {
+    background-size: 70%;
+    width          : 100%;
+    min-height     : 175px;
+    padding        : 5px;
+    margin-bottom  : 15px;
+}
+
+.maisInformacoes {
+    height          : 170px;
+    background-color: #828282;
+}
+
+.maisInformacoes img {
+    margin-top: 55%;
+}
+
+.pesquisaPecas {
+    background-color: #359ac7;
+    padding         : 20px;
+}
+
+.leiloes {
+    background-color: #dedede;
+    padding         : 20px;
+}
+
+a.nounderline:link {
+    text-decoration: none;
+}
+
+a>.card-body .pesquisaPecas {
+    color: #FFF;
+}
+
+a>.card-body .pesquisaPecas:hover {
+    background-color: #63cffa;
+    color           : #3c99f0;
+}
+
+a>.card-body .leiloes {
+    color          : #565656;
+    text-decoration: none;
+}
+
+a>.card-body .leiloes:hover {
+    background-color: #6b6b6b;
+    color           : #FFF;
+}
+
+.estatisticas .card-body {
+    padding: 5px;
+}
+
+ul.links-vertical {
+    padding: 0;
+}
+
+ul.links-vertical li {
+    display: block;
+}
+
+ul.links-vertical li>a {
+    color: #565656;
+}
+
+.list-inline-item>a {
+    font-size: 25px;
+    padding  : 5px;
+}
+
+.detran-wizard {
+    margin-top   : 10px;
+    margin-bottom: 10px;
+}
+
+.titulo-categoria-servico-detran {
+    font-weight      : bold;
+    margin-bottom    : 0;
+    /* text-transform: uppercase; */
+}
+
+.menu-title .post>a {
+    text-decoration: none !important;
+}
+
+.detran-lateral-card {
+    margin-bottom: 10px;
+}
+
+.detran-lateral-card h5 {
+    color: #2196F3;
+}
+
+.detran-servico-descricao {
+    background-color: #E3F2FD;
+    color           : #000 !important;
+}
+
+
+/** WIZARD **/
+
+.bs-wizard {
+    margin-top: 20px;
+}
+
+
+/*Form Wizard*/
+
+.bs-wizard {
+    padding: 0 0 10px 0;
+}
+
+.bs-wizard>.bs-wizard-step {
+    padding : 0;
+    position: relative;
+}
+
+.bs-wizard>.bs-wizard-step .bs-wizard-stepnum {
+    color           : #595959;
+    font-size       : 16px;
+    /* margin-bottom: 5px; */
+    height          : 45px;
+    padding-left    : 1px;
+    padding-right   : 1px;
+}
+
+.bs-wizard>.bs-wizard-step .bs-wizard-info {
+    color    : #999;
+    font-size: 14px;
+}
+
+.bs-wizard>.bs-wizard-step>.bs-wizard-dot {
+    position     : absolute;
+    width        : 30px;
+    height       : 30px;
+    display      : block;
+    background   : #99c6ff;
+    top          : 65px;
+    left         : 50%;
+    margin-top   : -10px;
+    margin-left  : -15px;
+    border-radius: 50%;
+}
+
+.bs-wizard>.bs-wizard-step>.bs-wizard-dot:after {
+    content      : ' ';
+    width        : 14px;
+    height       : 14px;
+    background   : #199bfb;
+    border-radius: 50px;
+    position     : absolute;
+    top          : 8px;
+    left         : 8px;
+}
+
+.bs-wizard>.bs-wizard-step>.progress {
+    position     : relative;
+    border-radius: 0px;
+    height       : 8px;
+    box-shadow   : none;
+    margin       : 22px 0;
+}
+
+.bs-wizard>.bs-wizard-step>.progress>.progress-bar {
+    width     : 0px;
+    box-shadow: none;
+    background: #99c6ff;
+}
+
+.bs-wizard>.bs-wizard-step.complete>.progress>.progress-bar {
+    width: 100%;
+}
+
+.bs-wizard>.bs-wizard-step.active>.progress>.progress-bar {
+    width: 50%;
+}
+
+.bs-wizard>.bs-wizard-step:first-child.active>.progress>.progress-bar {
+    width: 0%;
+}
+
+.bs-wizard>.bs-wizard-step:last-child.active>.progress>.progress-bar {
+    width: 100%;
+}
+
+.bs-wizard>.bs-wizard-step.disabled>.bs-wizard-dot {
+    background-color: #f5f5f5;
+}
+
+.bs-wizard>.bs-wizard-step.disabled>.bs-wizard-dot:after {
+    opacity: 0;
+}
+
+.bs-wizard>.bs-wizard-step:first-child>.progress {
+    left : 50%;
+    width: 50%;
+}
+
+.bs-wizard>.bs-wizard-step:last-child>.progress {
+    width: 50%;
+}
+
+.bs-wizard>.bs-wizard-step.disabled a.bs-wizard-dot {
+    pointer-events: none;
+}
+
+.card-header,
+.card-footer {
+    background-color: #fff;
+}
+
+.list-group-item h6 {
+    font-weight: bold !important;
+}
+
+#my_centered_buttons {
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.publicacoes-relacionadas>a {
+    color: #69696b;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+input.transparent-input:focus {
+    background-color: rgba(255, 255, 255, 0.644) !important;
+}
+
+input.transparent-input:focus::placeholder {
+    color: #424242;
+}
+
+
+.disabled {
+    opacity: 0.4;
+    filter : alpha(opacity=40);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.img_tooltip {
+    padding         : 5px;
+    border-radius   : .55rem;
+    background-color: #ccc;
+}
+
+.tooltip-inner {
+    max-width: 500px !important;
+}
+
+figure.image {
+    margin: .6rem;
+}
+
+figure {
+    display: inline-table !important;
+}
+
+figcaption {
+    display     : table-caption !important;
+    caption-side: top !important;
+}
+
+.termos-uso {
+    margin  : 0px auto;
+    height  : 150px;
+    overflow: auto;
+}
+
+.termos-uso-2 {
+    margin  : 0px auto;
+    height  : 200px;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo_busca.justify-content-between {
+        text-align: center !important;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 8% !important;
+    }
+
+    .carousel-indicators {
+        bottom: -5px !important;
+    }
+
+    .logo_busca {
+        text-align: center;
+    }
+
+    .logo_busca .logo-detran {
+        margin-bottom: 25px;
+    }
+
+    .logo_busca .form-group {
+        margin-bottom: 0;
+    }
+
+    .termos-uso {
+        height: 300px;
+    }
+}

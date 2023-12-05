@@ -1,0 +1,289 @@
+$(function() {
+
+	$('.topo-pagina').hide();
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 0) {
+			$('.topo-pagina').fadeIn();
+		} else {
+			$('.topo-pagina').fadeOut();
+		}
+	});
+
+	$('.topo-pagina').click(function() {
+		$('html').animate({
+			scrollTop: 0
+		});
+	});
+
+    /* Verifica se meiomask foi carregado */
+	if (jQuery().setMask) {
+		$('.txt-telefone-celular').keyup(function() {
+            var elemento = $(this),
+            contato = elemento.val().replace(/\D/g, '');
+			
+			/* Telefone */
+			if (contato.length < 10) {
+				elemento.setMask('(99)9999-9999');
+			}
+			/* Celular */
+			else {
+				elemento.setMask('(99)99999-9999');
+			}
+			
+			/* Remove a máscara para não pular o campo e conseguir continuar preenchendo */
+			elemento.unsetMask();
+        }).keyup();
+        
+        $('.txt-telefone').each(function() {
+            $(this).setMask({
+                mask: '(99)9999-9999'
+            });
+        });
+
+        $('.txt-celular').each(function() {
+            $(this).setMask({
+                mask: '(99)99999-9999'
+            });
+        });
+
+		$('.txt-alfanumerico').each(function() {
+			$(this).setMask({
+				mask: '*',
+				type: 'repeat',
+				maxLength: $(this).attr('maxlength')
+			});
+		});
+
+		$('.txt-alpha').each(function() {
+			$(this).setMask({
+				mask: 'a',
+				type: 'repeat',
+				maxLength: $(this).attr('maxlength')
+			});
+		});
+
+		$('.txt-numerico').each(function() {
+			$(this).setMask({
+				mask: '9',
+				type: 'repeat',
+				maxLength: $(this).attr('maxlength')
+			});
+		});
+
+		$('.txt-data').each(function() {
+			$(this).setMask({
+				mask: '39/19/9999'
+			});
+        });
+
+		$('.txt-hora').each(function() {
+			$(this).setMask({
+				mask: '29:59:59'
+			});
+		});
+        
+        $('.txt-cep').each(function() {
+            $(this).setMask({
+                mask: '99999-999'
+            });
+        });
+
+		$('.txt-cpf-cnpj').keyup(function() {
+            var elemento = $(this),
+            documento = elemento.val().replace(/\D/g, '');
+			
+			/* cpf */
+			if (documento.length <= 11) {
+				elemento.setMask('999.999.999-99');
+			}
+			/* cnpj */
+			else {
+				elemento.setMask('99.999.999/9999-99');
+			}
+
+			/* Remove a máscara para não pular o campo e conseguir continuar preenchendo */
+			elemento.unsetMask();
+        }).keyup();		
+		
+		$('.txt-cpf').each(function() {
+			$(this).setMask({
+				mask: '999.999.999-99'
+			});
+        });
+        
+		$('.txt-cnpj').each(function() {
+			$(this).setMask({
+				mask: '99.999.999/9999-99'
+			});
+        });
+        
+		$('.txt-moeda, .txt-decimal').each(function() {
+			var $this = $(this),
+				quantidadeCasaDecimal = 2;
+
+			if ($this.attr('quantidade-casa-decimal')) {
+				quantidadeCasaDecimal = $this.attr('quantidade-casa-decimal');
+			}
+			
+			var casasDecimais = ''.padStart(quantidadeCasaDecimal, '9'),
+				mask = casasDecimais + ',999.999.999.999',
+				valorPadrao = ''.padStart(++quantidadeCasaDecimal, '0'),
+				campoVazio = $this.val() == '';
+			
+			/* Caso seja um inteiro, adiciona casas decimais ao valor */	
+			if (! $this.val().match(/[.,]/)) {
+				$this.val(
+					$this.val() + ','.padEnd(quantidadeCasaDecimal, '0')
+				);
+			}
+
+			$this.setMask({
+				mask: mask, 
+				type: 'reverse', 
+				defaultValue: valorPadrao,
+			});
+
+			if (campoVazio) {
+				$this.val('');
+			}
+		});
+    }
+    
+    $('.txt-maiusculo').keyup(function() {
+        $this = $(this);
+
+        $this.val(
+            $this.val().toUpperCase()
+        );
+    });
+
+	$('.txt-minusculo').keyup(function() {
+        $this = $(this);
+
+        $this.val(
+            $this.val().toLowerCase()
+        );
+	});
+
+	/* Verifica se select2 foi carregado */
+	if (jQuery().select2) {
+		var naoMostrarSelect2 = [
+			0, '0', false, 'false'
+		];
+
+		$('select').each(function() {
+            var $this = $(this);
+
+			if (naoMostrarSelect2.includes($this.attr('select2'))) {
+                return true; /* Continue do each */
+            }
+
+			$this.select2({
+				theme: 'bootstrap4',
+				language: 'pt-BR'
+			});
+		});
+    }
+    
+	/* Verifica se datepicker foi carregado */
+	if (jQuery().datepicker) {
+		$('.txt-data-padrao').each(function() {
+			$(this).datepicker({
+				language: 'pt-BR',
+				autoclose: true,
+				clearBtn: true,
+				todayHighlight: true,
+			}).attr('autocomplete', 'off');
+		});
+
+		$('.txt-data-minima-hoje').each(function() {
+			$(this).datepicker({
+				language: 'pt-BR',
+				autoclose: true,
+				clearBtn: true,
+				todayHighlight: true,
+				startDate: new Date(),
+			}).attr('autocomplete', 'off');
+		});
+
+		$('.txt-data-maxima-hoje').each(function() {
+			$(this).datepicker({
+				language: 'pt-BR',
+				autoclose: true,
+				clearBtn: true,
+				todayHighlight: true,
+				endDate: new Date(),
+			}).attr('autocomplete', 'off');
+		});
+
+		$('.txt-data-dias-semana').each(function() {
+			$(this).datepicker({
+				language: 'pt-BR',
+				autoclose: true,
+				clearBtn: true,
+				daysOfWeekDisabled: [0, 6],
+				todayHighlight: true,
+			}).attr('autocomplete', 'off');
+		});
+
+		$('.txt-data-ano').each(function() {
+			$(this).datepicker({
+				language: 'pt-BR',
+				autoclose: true,
+				format: 'yyyy',
+				viewMode: 'years', 
+				minViewMode: 'years',
+			}).attr('autocomplete', 'off');
+		});
+
+		$('.txt-data-mes-ano').each(function() {
+			$(this).datepicker({
+				language: 'pt-BR',
+				autoclose: true,
+				format: 'mm/yyyy',
+				viewMode: 'months',
+				minViewMode: 'months',
+			}).attr('autocomplete', 'off');
+		});
+	}
+});
+
+/*
+	Exemplo: alertaConfirmacao('Realmente deseja apagar este registro?');
+*/
+function alertaConfirmacao(mensagem) {
+	return alerta({
+		type: 'question',
+		title: mensagem,
+		showCloseButton: true,
+		showConfirmButton: true,
+		confirmButtonColor: '#3085d6',
+		confirmButtonText: 'Sim',
+		showCancelButton: true,
+		cancelButtonColor: '#d33',
+		cancelButtonText: 'Não',
+	});
+}
+
+/*
+	Exemplo: alerta({
+		title: retorno.responseJSON.mensagem,
+		type: 'error'
+	});
+*/
+function alerta(opcoes) {
+	var acessadoPeloCelular = $(window).width() <= 768;
+
+	var configuracoes = $.extend({
+	    type: 'success',
+	    showConfirmButton: false,
+      	allowOutsideClick: false,
+      	toast: acessadoPeloCelular,
+		showCloseButton: !acessadoPeloCelular,
+		timer: acessadoPeloCelular ? 10000 : null,
+      	position: acessadoPeloCelular ? 'top-end' : 'center',
+	}, opcoes );
+
+	return swal.fire(configuracoes);
+}

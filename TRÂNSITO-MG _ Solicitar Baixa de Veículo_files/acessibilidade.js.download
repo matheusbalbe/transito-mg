@@ -1,0 +1,153 @@
+/**
+ * Altera o tamanho da fonte de acordo com os comandos da barra de acessibilidade no menu superior 
+ */
+function tamanhoFonte(operacao) {
+
+    var body = $('body');
+    var fonteBody = body.css('font-size');
+
+    if (operacao == 'a') {
+        var tamanho = parseInt(fonteBody) + 1;
+        window.sessionStorage.setItem('tamanho-fonte', tamanho);
+        body.css("font-size", tamanho);
+    } else if (operacao == 'd') {
+        var tamanho = parseInt(fonteBody) - 1;
+        window.sessionStorage.setItem('tamanho-fonte', tamanho);
+        body.css("font-size", parseInt(fonteBody) - 1);
+    }
+}
+
+/**
+ * Altera o tamanho da fonte para a padrão 14px 
+ */
+function tamanhoFontePadrao() {
+
+    var body = $('body');
+    var fonteBody = body.css('font-size');
+    var tamanho = 14;
+
+    window.sessionStorage.setItem('tamanho-fonte', tamanho);
+    body.css("font-size", tamanho);
+}
+
+/**
+ *  Atualiza o contraste da tela
+ */
+function atualizarContraste() {
+
+    var contraste = window.sessionStorage.getItem('contraste');
+
+    if (contraste == 1) {
+        removerContraste();
+    } else {
+        aplicarContraste();
+    }
+
+}
+
+/**
+ *  Remove o contraste, voltando as cores para a padrão
+ */
+function removerContraste() {
+
+    window.sessionStorage.removeItem('contraste');
+
+    $("body")
+        .css("background-color", "#f8f9fa")
+        .css("color", "black");
+
+    $("footer>.container-fluid")
+        .css("background-color", "#FFF")
+        .css("color", "black");
+
+    $("footer hr")
+        .css("border-top", "1px solid rgba(0,0,0,.1)")
+
+
+    $('main .card')
+        .css("border", "1px solid rgba(0,0,0,.125)")
+        .css("border-radius", ".25rem")
+
+    $('main .card, main .card-body, main .card-header, main .card-footer')
+        .css("background-color", "#fff")
+        .css("color", "black");
+
+    $('.list-group-item')
+        .css("background-color", "#fff")
+        .css("color", "black");
+
+    $('.modal-content')
+        .css("background-color", "#fff");
+}
+
+/**
+ * Altera o contraste da página
+ */
+function aplicarContraste() {
+
+    window.sessionStorage.setItem('contraste', 1);
+
+    $("body")
+        .css("background-color", "black")
+        .css("color", "yellow");
+
+    $("footer>.container-fluid")
+        .css("background-color", "black")
+        .css("color", "yellow");
+
+    $("footer hr")
+        .css("border-top", "1px solid #a9a0a020")
+
+    $('main .card')
+        .css("border", "1px solid #a9a0a020")
+        .css("border-radius", ".25rem")
+
+    $('main .card, main .card-body, main .card-header, main .card-footer')
+        .css("background-color", "black")
+        .css("color", "yellow");
+        
+    $('main .list-group-item')
+        .css("background-color", "black")
+        .css("border-bottom", "1px solid #a9a0a020")
+        .css("color", "yellow");
+        
+    $('.modal-content')
+        .css("background-color", "black");
+}
+
+$(document).ready(function () {
+
+    // Se a fonte for alterada, atualiza o tamanho
+    var tamanhoFonte = window.sessionStorage.getItem('tamanho-fonte');
+
+    if (tamanhoFonte != "") {
+        $('body').css('font-size', tamanhoFonte + "px");
+    }
+
+    // Se for marcado o contraste, chama a função
+    var contraste = window.sessionStorage.getItem('contraste');
+
+    if (contraste == 1) {
+        console.log('entrou');
+        aplicarContraste();
+    }
+});
+
+$(document).keydown(function (e) {
+    if (e.keyCode == 194 && e.shiftKey) {
+        // alert("shift + .");
+        atualizarContraste();
+    }
+    if (e.keyCode == 107 && e.shiftKey) {
+        // alert("shift +");
+        tamanhoFonte('a');
+    }
+    if (e.keyCode == 109 && e.shiftKey) {
+        // alert("shift -");
+        tamanhoFonte('d');
+    }
+    if (e.keyCode == 80 && e.shiftKey) {
+        // alert("shift+p");
+        tamanhoFontePadrao();
+    }
+});
